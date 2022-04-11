@@ -117,5 +117,5 @@
     width: 100%;
     font-size: 40px;
     text-align: center;
-    // @include scaleLoading(1.8s);
+    @include scaleLoading(1.8s);
 }
