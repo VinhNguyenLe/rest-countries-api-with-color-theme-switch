@@ -1,0 +1,84 @@
+//Responsive
+
+@mixin mobile {
+    @media screen and (max-width: $mobileWidth) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $mobileWidth) and (max-width: $tabletWidth) {
+        @content;
+    }
+}
+
+@mixin tabletAndMobile {
+    @media screen and (max-width: $tabletWidth) {
+       @content; 
+    }
+}
+
+@mixin smallThan1200 {
+    @media screen and (max-width: $largeDeviceWidth) {
+        @content;
+    }
+}
+
+@mixin largeDevice {
+    @media screen and (min-width: $largeDeviceWidth) {
+        @content;
+    }
+}
+
+@mixin smallThan1440 {
+    @media screen and (max-width: 1440px) {
+        @content;
+    }
+}
+
+//Animation
+
+@keyframes dropDown {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@mixin dropDown($s) {
+    animation: dropDown $s ease;
+}
+
+@keyframes scaleLoading{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+
+@mixin scaleLoading($s) {
+    animation: scaleLoading $s ease infinite;
+}
+
+@keyframes opct{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@mixin opct($s) {
+    animation: opct $s ease;
+}

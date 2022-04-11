@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/img/favicon-32x32.png">
+
+    <title>REST countries API with color theme switch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/sass/style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <h2>Where in the world?</h2>
+            <div class="theme">
+                <i class="fa-solid fa-sun sun-icon"></i>
+                <i class="fa-regular fa-moon moon-icon"></i>
+                <h3 class="theme-text">Dark mode</h3>
+            </div>
+        </header>
+
+        <div class="body">
+            <section class="countries">
+                <div class="selector">
+                    <div class="input-search">
+                        <input type="text" placeholder="Search for a country..." class="input-search-country">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="filter-search">
+                        <h3>Filter by Region <i class="fa-solid fa-angle-down"></i></h3>
+                        <div class="filter-select">
+                            <div class="filter-select-item" data-region="All">All</div>
+                            <div class="filter-select-item" data-region="Africa">Africa</div>
+                            <div class="filter-select-item" data-region="America">America</div>
+                            <div class="filter-select-item" data-region="Asia">Asia</div>
+                            <div class="filter-select-item" data-region="Europe">Europe</div>
+                            <div class="filter-select-item" data-region="Oceania">Oceania</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="countries-wrap">
+                    <h3 class="loading">Loading...</h3>
+                </div>
+            </section>
+            <section class="detail">
+                <div class="back">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                    Back
+                </div>
+                <div class="country-detail">
+                    <h3 class="loading">Loading...</h3></div>
+            </section>
+        </div>
+    </main>
+
+    <script src="./src/js/main.js"></script>
+</body>
+</html>

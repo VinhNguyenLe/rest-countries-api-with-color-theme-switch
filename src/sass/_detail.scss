@@ -1,0 +1,121 @@
+.detail{
+    width: 100%;
+    background-color: $lightBg;
+    display: none;
+    margin-top: 60px;
+    padding: 0 5%;
+    min-height: 100vh;
+}
+
+.detail.show{
+    display: block;
+}
+
+.back{
+    background-color: $white;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 8px -2px $lightInput;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+    
+    & i{
+        margin-right: 8px;
+    }
+}
+
+.country-detail{
+    display: flex;
+    margin-top: 80px;
+    justify-content: space-between;
+    @include smallThan1200{
+        justify-content: unset;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-img {
+        width: 44%;
+        @include tabletAndMobile{
+            width: 100%;
+        }
+
+        & img{
+            width: 100%;
+        }
+    }
+    &-content{
+        width: 46%;
+        @include tabletAndMobile{
+            width: 100%;
+        }
+
+        &-name{
+            font-size: 36px;
+            font-weight: 800;
+            margin-block: 32px;
+        }
+    }
+
+    &-des{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include smallThan1200{
+            flex-direction: column;
+            justify-content: unset;
+        }
+
+        &-item p{
+            font-weight: 700;
+            margin-bottom: 8px;
+
+            & span{
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.border-countries{
+    margin-block: 48px;
+    @include tabletAndMobile{
+        margin-top: 24px;
+    }
+
+    &>p{
+        font-weight: 700;
+    }
+
+    &-name{
+        display: flex;
+        flex-wrap: wrap;
+
+        & p{
+            width: 104px;
+            text-align: center;
+            margin-top: 20px;
+            margin-right: 16px;
+            padding: 2px 8px;
+            box-shadow: 0px 0px 4px 0 $lightInput;
+        }
+    }
+}
+
+.no-border{
+    margin-top: 12px;
+    color: red;
+    font-size: 16px;
+}
+
+.loading{
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    // @include scaleLoading(1.8s);
+}

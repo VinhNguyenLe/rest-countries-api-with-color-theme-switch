@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fontFamily;
+}
+
+main{
+    width: 100%;
+    background-color: $lightBg;
+}
+
+.hide{
+    display: none;
+}
